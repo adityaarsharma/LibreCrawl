@@ -4,6 +4,8 @@ A web-based multi-tenant crawler for SEO analysis and website auditing.
 
 🌐 **Website**: [librecrawl.com](https://librecrawl.com)
 
+[![Leave a tip](https://img.shields.io/badge/Leave%20a%20tip-Ko--fi-FF5E5B?style=flat-square&logo=ko-fi&logoColor=white)](https://ko-fi.com/adityaarsharma)
+
 **Demo no longer available cause people thought it was a prod environ, it isnt, it was a demo to get a taste before installing**
 
 **API Documentation:** [https://librecrawl.com/api/docs/](https://librecrawl.com/api/docs/)
