@@ -1,8 +1,8 @@
-# LibreCrawl
+# LibreCrawl (unofficial fork)
 
-A web-based multi-tenant crawler for SEO analysis and website auditing.
+A web-based multi-tenant crawler for SEO analysis and website auditing. This repository is an unofficial fork of the open-source LibreCrawl crawler.
 
-🌐 **Website**: [librecrawl.com](https://librecrawl.com)
+> **This is an unofficial fork of LibreCrawl** ([https://github.com/phialsbasement/librecrawl](https://github.com/phialsbasement/librecrawl)). Tips via Ko-fi support my fork, not the upstream project.
 
 [![Leave a tip](https://img.shields.io/badge/Leave%20a%20tip-Ko--fi-FF5E5B?style=flat-square&logo=ko-fi&logoColor=white)](https://ko-fi.com/adityaarsharma)
 
@@ -11,6 +11,22 @@ A web-based multi-tenant crawler for SEO analysis and website auditing.
 **API Documentation:** [https://librecrawl.com/api/docs/](https://librecrawl.com/api/docs/)
 
 LibreCrawl will ***always*** be free and open source. If it's replacing your $259/year Screaming Frog license, deepcrawl license or sitebulb license, [buy me a coffee](https://www.paypal.com/donate/?business=7H9HFA3385JS8&no_recurring=0&item_name=Continue+the+development+of+LibreCrawl&currency_code=AUD).
+
+## About this fork
+
+- **Unofficial.** Not affiliated with LibreCrawl or its maintainer. The official project and website are [PhialsBasement/LibreCrawl](https://github.com/phialsbasement/librecrawl) and [librecrawl.com](https://librecrawl.com). The MIT licence is kept, and the credit for the crawler is upstream's.
+- **Where it stands today.** The crawler code here is upstream's as of 1 June 2026, plus this README. Nothing else is changed yet. Newer features (n-gram analysis, custom extraction, list mode) landed upstream after this fork last synced, so for the newest version use upstream.
+- **Who keeps it.** [Aditya Sharma](https://adityaarsharma.com).
+- **Related project.** [Sitewalk](https://github.com/adityaarsharma/sitewalk) uses LibreCrawl as its crawler engine and keeps small patches on top of it: image and link checks never probe third-party sites, and they obey robots.txt. Those patches are not in this fork yet.
+
+### Planned for this fork (not built yet)
+
+- A ChatGPT app for LibreCrawl, so you can ask ChatGPT to crawl a site and read the results.
+- The Sitewalk patches above, as a clean change that can also be offered upstream.
+- Plainer fix guidance for each SEO issue the crawler finds.
+- A README and docs that make clear what differs from upstream, kept up to date as changes land.
+
+Tips are welcome through the Ko-fi badge above. If LibreCrawl itself saves you money, the upstream project's own donation link further down is the way to support it.
 
 ## What it does
 
