@@ -1,6 +1,6 @@
-# LibreCrawl (unofficial fork)
+# LibreCrawl for Sitewalk (unofficial fork)
 
-A web-based multi-tenant crawler for SEO analysis and website auditing. This repository is an unofficial fork of the open-source LibreCrawl crawler.
+This is the LibreCrawl fork kept for [Sitewalk](https://github.com/adityaarsharma/sitewalk), a technical SEO audit tool you can use from ChatGPT ([audit.adityaarsharma.com](https://audit.adityaarsharma.com)). Sitewalk uses LibreCrawl as its crawler engine. LibreCrawl is a web-based multi-tenant crawler for SEO analysis and website auditing.
 
 > **This is an unofficial fork of LibreCrawl** ([https://github.com/phialsbasement/librecrawl](https://github.com/phialsbasement/librecrawl)). Tips via Ko-fi support my fork, not the upstream project.
 
@@ -15,16 +15,20 @@ LibreCrawl will ***always*** be free and open source. If it's replacing your $25
 ## About this fork
 
 - **Unofficial.** Not affiliated with LibreCrawl or its maintainer. The official project and website are [PhialsBasement/LibreCrawl](https://github.com/phialsbasement/librecrawl) and [librecrawl.com](https://librecrawl.com). The MIT licence is kept, and the credit for the crawler is upstream's.
-- **Where it stands today.** The crawler code here is upstream's as of 1 June 2026, plus this README. Nothing else is changed yet. Newer features (n-gram analysis, custom extraction, list mode) landed upstream after this fork last synced, so for the newest version use upstream.
+- **Why it exists.** It is the LibreCrawl base for [Sitewalk](https://github.com/adityaarsharma/sitewalk): the self-hosted Sitewalk server drives LibreCrawl, and the hosted [Sitewalk for ChatGPT](https://chatgpt.com/plugins/plugin_asdk_app_6ac47963cb448191a5b1757e0682bd6a) app runs on it too. If you want to run an audit, start with Sitewalk. If you want the crawler on its own, use upstream.
+- **Where it stands today.** The crawler code here is upstream's as of 1 June 2026, plus this README. Nothing else is changed yet. Sitewalk keeps its own patched copy of the crawler for now, so the changes below are not in this repository yet. Newer upstream features (n-gram analysis, custom extraction, list mode) landed after this fork last synced, so for the newest crawler use upstream.
 - **Who keeps it.** [Aditya Sharma](https://adityaarsharma.com).
-- **Related project.** [Sitewalk](https://github.com/adityaarsharma/sitewalk) uses LibreCrawl as its crawler engine and keeps small patches on top of it: image and link checks never probe third-party sites, and they obey robots.txt. Those patches are not in this fork yet.
+
+### What Sitewalk changes on top of LibreCrawl (in Sitewalk today, not yet in this fork)
+
+- Image and link checks never probe third-party sites, and they obey robots.txt with the same user agent as page fetches. A URL that robots.txt disallows is never requested, so it cannot be reported as a broken image.
+- A report that ranks issues by impact, with a plain fix for each, as PDF and CSV files.
 
 ### Planned for this fork (not built yet)
 
-- A ChatGPT app for LibreCrawl, so you can ask ChatGPT to crawl a site and read the results.
-- The Sitewalk patches above, as a clean change that can also be offered upstream.
-- Plainer fix guidance for each SEO issue the crawler finds.
-- A README and docs that make clear what differs from upstream, kept up to date as changes land.
+- Bring the Sitewalk crawler changes above in as a clean change, and offer them upstream as a pull request.
+- Sync with upstream so the newer features are included.
+- A README and docs that state what differs from upstream, kept up to date as changes land.
 
 Tips are welcome through the Ko-fi badge above. If LibreCrawl itself saves you money, the upstream project's own donation link further down is the way to support it.
 
