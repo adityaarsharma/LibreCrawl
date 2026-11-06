@@ -1,1 +1,340 @@
-IyBMaWJyZUNyYXdsCgpBIHdlYi1iYXNlZCBtdWx0aS10ZW5hbnQgY3Jhd2xlciBmb3IgU0VPIGFuYWx5c2lzIGFuZCB3ZWJzaXRlIGF1ZGl0aW5nLiBUaGlzIGZvcmsgaXMga2VwdCBmb3IgW1NpdGV3YWxrXShodHRwczovL2dpdGh1Yi5jb20vYWRpdHlhYXJzaGFybWEvc2l0ZXdhbGspLCBhIHRlY2huaWNhbCBTRU8gYXVkaXQgdG9vbCB5b3UgY2FuIHVzZSBmcm9tIENoYXRHUFQgKFthdWRpdC5hZGl0eWFhcnNoYXJtYS5jb21dKGh0dHBzOi8vYXVkaXQuYWRpdHlhYXJzaGFybWEuY29tKSk7IFNpdGV3YWxrIHVzZXMgTGlicmVDcmF3bCBhcyBpdHMgY3Jhd2xlciBlbmdpbmUuCgrwn4yQICoqV2Vic2l0ZSoqOiBbbGlicmVjcmF3bC5jb21dKGh0dHBzOi8vbGlicmVjcmF3bC5jb20pCgo+ICoqVGhpcyBpcyBhbiB1bm9mZmljaWFsIGZvcmsgb2YgTGlicmVDcmF3bCoqIChbaHR0cHM6Ly9naXRodWIuY29tL3BoaWFsc2Jhc2VtZW50L2xpYnJlY3Jhd2xdKGh0dHBzOi8vZ2l0aHViLmNvbS9waGlhbHNiYXNlbWVudC9saWJyZWNyYXdsKSkuIFRpcHMgdmlhIEtvLWZpIHN1cHBvcnQgbXkgZm9yaywgbm90IHRoZSB1cHN0cmVhbSBwcm9qZWN0LgoKW1shW0xlYXZlIGEgdGlwXShodHRwczovL2ltZy5zaGllbGRzLmlvL2JhZGdlL0xlYXZlJTIwYSUyMHRpcC1Lby0tZmktRkY1RTVCP3N0eWxlPWZsYXQtc3F1YXJlJmxvZ289a28tZmkmbG9nb0NvbG9yPXdoaXRlKV0oaHR0cHM6Ly9rby1maS5jb20vYWRpdHlhYXJzaGFybWEpCgoqKkRlbW8gbm8gbG9uZ2VyIGF2YWlsYWJsZSBjYXVzZSBwZW9wbGUgdGhvdWdodCBpdCB3YXMgYSBwcm9kIGVudmlyb24sIGl0IGlzbnQsIGl0IHdhcyBhIGRlbW8gdG8gZ2V0IGEgdGFzdGUgYmVmb3JlIGluc3RhbGxpbmcqKgoKKipBUEkgRG9jdW1lbnRhdGlvbjoqKiBbaHR0cHM6Ly9saWJyZWNyYXdsLmNvbS9hcGkvZG9jcy9dKGh0dHBzOi8vbGlicmVjcmF3bC5jb20vYXBpL2RvY3MvKQoKTGlicmVDcmF3bCB3aWxsICoqKmFsd2F5cyoqKiBiZSBmcmVlIGFuZCBvcGVuIHNvdXJjZS4gSWYgaXQncyByZXBsYWNpbmcgeW91ciAkMjU5L3llYXIgU2NyZWFtaW5nIEZyb2cgbGljZW5zZSwgZGVlcGNyYXdsIGxpY2Vuc2Ugb3Igc2l0ZWJ1bGIgbGljZW5zZSwgW2J1eSBtZSBhIGNvZmZlZV0oaHR0cHM6Ly93d3cucGF5cGFsLmNvbS9kb25hdGUvP2J1c2luZXNzPTdIOUhGQTMzODVKUzgmbm9fcmVjdXJyaW5nPTAmaXRlbV9uYW1lPUNvbnRpbnVlK3RoZStkZXZlbG9wbWVudCtvZitMaWJyZUNyYXdsJmN1cnJlbmN5X2NvZGU9QVVEKS4KCiMjIEFib3V0IHRoaXMgZm9yawoKLSAqKlVub2ZmaWNpYWwuKiogTm90IGFmZmlsaWF0ZWQgd2l0aCBMaWJyZUNyYXdsIG9yIGl0cyBtYWludGFpbmVyLiBUaGUgb2ZmaWNpYWwgcHJvamVjdCBhbmQgd2Vic2l0ZSBhcmUgW1BoaWFsc0Jhc2VtZW50L0xpYnJlQ3Jhd2xdKGh0dHBzOi8vZ2l0aHViLmNvbS9waGlhbHNiYXNlbWVudC9saWJyZWNyYXdsKSBhbmQgW2xpYnJlY3Jhd2wuY29tXShodHRwczovL2xpYnJlY3Jhd2wuY29tKS4gVGhlIE1JVCBsaWNlbmNlIGlzIGtlcHQsIGFuZCB0aGUgY3JlZGl0IGZvciB0aGUgY3Jhd2xlciBpcyB1cHN0cmVhbSdzLgotICoqV2h5IGl0IGV4aXN0cy4qKiBJdCBpcyB0aGUgTGlicmVDcmF3bCBiYXNlIGZvciBbU2l0ZXdhbGtdKGh0dHBzOi8vZ2l0aHViLmNvbS9hZGl0eWFhcnNoYXJtYS9zaXRld2Fsayk6IHRoZSBzZWxmLWhvc3RlZCBTaXRld2FsayBzZXJ2ZXIgZHJpdmVzIExpYnJlQ3Jhd2wsIGFuZCB0aGUgaG9zdGVkIFtTaXRld2FsayBmb3IgQ2hhdEdQVF0oaHR0cHM6Ly9jaGF0Z3B0LmNvbS9wbHVnaW5zL3BsdWdpbl9hc2RrX2FwcF82YWM0Nzk2M2NiNDQ4MTkxYTViMTc1N2UwNjgyYmQ2YSkgYXBwIHJ1bnMgb24gaXQgdG9vLiBJZiB5b3Ugd2FudCB0byBydW4gYW4gYXVkaXQsIHN0YXJ0IHdpdGggU2l0ZXdhbGsuIElmIHlvdSB3YW50IHRoZSBjcmF3bGVyIG9uIGl0cyBvd24sIHVzZSB1cHN0cmVhbS4KLSAqKldoZXJlIGl0IHN0YW5kcyB0b2RheS4qKiBUaGUgY3Jhd2xlciBjb2RlIGhlcmUgaXMgdXBzdHJlYW0ncyBhcyBvZiAxIEp1bmUgMjAyNiwgcGx1cyB0aGlzIFJFQURNRS4gTm90aGluZyBlbHNlIGlzIGNoYW5nZWQgeWV0LiBTaXRld2FsayBrZWVwcyBpdHMgb3duIHBhdGNoZWQgY29weSBvZiB0aGUgY3Jhd2xlciBmb3Igbm93LCBzbyB0aGUgY2hhbmdlcyBiZWxvdyBhcmUgbm90IGluIHRoaXMgcmVwb3NpdG9yeSB5ZXQuIE5ld2VyIHVwc3RyZWFtIGZlYXR1cmVzIChuLWdyYW0gYW5hbHlzaXMsIGN1c3RvbSBleHRyYWN0aW9uLCBsaXN0IG1vZGUpIGxhbmRlZCBhZnRlciB0aGlzIGZvcmsgbGFzdCBzeW5jZWQsIHNvIGZvciB0aGUgbmV3ZXN0IGNyYXdsZXIgdXNlIHVwc3RyZWFtLgotICoqV2hvIGtlZXBzIGl0LioqIFtBZGl0eWEgU2hhcm1hXShodHRwczovL2FkaXR5YWFyc2hhcm1hLmNvbSkuCgojIyMgV2hhdCBTaXRld2FsayBjaGFuZ2VzIG9uIHRvcCBvZiBMaWJyZUNyYXdsIChpbiBTaXRld2FsayB0b2RheSwgbm90IHlldCBpbiB0aGlzIGZvcmspCgotIEltYWdlIGFuZCBsaW5rIGNoZWNrcyBuZXZlciBwcm9iZSB0aGlyZC1wYXJ0eSBzaXRlcywgYW5kIHRoZXkgb2JleSByb2JvdHMudHh0IHdpdGggdGhlIHNhbWUgdXNlciBhZ2VudCBhcyBwYWdlIGZldGNoZXMuIEEgVVJMIHRoYXQgcm9ib3RzLnR4dCBkaXNhbGxvd3MgaXMgbmV2ZXIgcmVxdWVzdGVkLCBzbyBpdCBjYW5ub3QgYmUgcmVwb3J0ZWQgYXMgYSBicm9rZW4gaW1hZ2UuCi0gQSByZXBvcnQgdGhhdCByYW5rcyBpc3N1ZXMgYnkgaW1wYWN0LCB3aXRoIGEgcGxhaW4gZml4IGZvciBlYWNoLCBhcyBQREYgYW5kIENTViBmaWxlcy4KCiMjIyBQbGFubmVkIGZvciB0aGlzIGZvcmsgKG5vdCBidWlsdCB5ZXQpCgotIEJyaW5nIHRoZSBTaXRld2FsayBjcmF3bGVyIGNoYW5nZXMgYWJvdmUgaW4gYXMgYSBjbGVhbiBjaGFuZ2UsIGFuZCBvZmZlciB0aGVtIHVwc3RyZWFtIGFzIGEgcHVsbCByZXF1ZXN0LgotIFN5bmMgd2l0aCB1cHN0cmVhbSBzbyB0aGUgbmV3ZXIgZmVhdHVyZXMgYXJlIGluY2x1ZGVkLgotIEEgUkVBRE1FIGFuZCBkb2NzIHRoYXQgc3RhdGUgd2hhdCBkaWZmZXJzIGZyb20gdXBzdHJlYW0sIGtlcHQgdXAgdG8gZGF0ZSBhcyBjaGFuZ2VzIGxhbmQuCgpUaXBzIGFyZSB3ZWxjb21lIHRocm91Z2ggdGhlIEtvLWZpIGJhZGdlIGFib3ZlLiBJZiBMaWJyZUNyYXdsIGl0c2VsZiBzYXZlcyB5b3UgbW9uZXksIHRoZSB1cHN0cmVhbSBwcm9qZWN0J3Mgb3duIGRvbmF0aW9uIGxpbmsgZnVydGhlciBkb3duIGlzIHRoZSB3YXkgdG8gc3VwcG9ydCBpdC4KCiMjIFdoYXQgaXQgZG9lcwoKTGlicmVDcmF3bCBjcmF3bHMgd2Vic2l0ZXMgYW5kIGdpdmVzIHlvdSBkZXRhaWxlZCBpbmZvcm1hdGlvbiBhYm91dCBwYWdlcywgbGlua3MsIFNFTyBlbGVtZW50cywgYW5kIHBlcmZvcm1hbmNlLiBJdCdzIGJ1aWx0IGFzIGEgd2ViIGFwcGxpY2F0aW9uIHVzaW5nIFB5dGhvbiBGbGFzayB3aXRoIGEgbW9kZXJuIHdlYiBpbnRlcmZhY2Ugc3VwcG9ydGluZyBtdWx0aXBsZSBjb25jdXJyZW50IHVzZXJzLgoKIyMgRmVhdHVyZXMKCi0g8J+agCAqKk11bHRpLXRlbmFuY3kqKiAtIE11bHRpcGxlIHVzZXJzIGNhbiBjcmF3bCBzaW11bHRhbmVvdXNseSB3aXRoIGlzb2xhdGVkIHNlc3Npb25zCi0g8J+OqCAqKkN1c3RvbSBDU1Mgc3R5bGluZyoqIC0gUGVyc29uYWxpemUgdGhlIFVJIHdpdGggeW91ciBvd24gQ1NTIHRoZW1lcwotIPCfkr4gKipCcm93c2VyIGxvY2FsU3RvcmFnZSBwZXJzaXN0ZW5jZSoqIC0gU2V0dGluZ3Mgc2F2ZWQgcGVyIGJyb3dzZXIKLSDwn5SEICoqSmF2YVNjcmlwdCByZW5kZXJpbmcqKiBmb3IgZHluYW1pYyBjb250ZW50IChSZWFjdCwgVnVlLCBBbmd1bGFyLCBldGMuKQotIPCfk4ogKipTRU8gYW5hbHlzaXMqKiAtIEV4dHJhY3QgdGl0bGVzLCBtZXRhIGRlc2NyaXB0aW9ucywgaGVhZGluZ3MsIGV0Yy4KLSDwn5SXICoqTGluayBhbmFseXNpcyoqIC0gVHJhY2sgaW50ZXJuYWwgYW5kIGV4dGVybmFsIGxpbmtzIHdpdGggZGV0YWlsZWQgcmVsYXRpb25zaGlwIG1hcHBpbmcKLSDwn5OIICoqUGFnZVNwZWVkIEluc2lnaHRzIGludGVncmF0aW9uKiogLSBBbmFseXplIENvcmUgV2ViIFZpdGFscwotIPCfkr4gKipNdWx0aXBsZSBleHBvcnQgZm9ybWF0cyoqIC0gQ1NWLCBKU09OLCBvciBYTUwKLSDwn5SNICoqSXNzdWUgZGV0ZWN0aW9uKiogLSBBdXRvbWF0ZWQgU0VPIGlzc3VlIGlkZW50aWZpY2F0aW9uCi0g4pqhICoqUmVhbC10aW1lIGNyYXdsaW5nIHByb2dyZXNzKiogd2l0aCBsaXZlIHN0YXRpc3RpY3MKCiMjIEdldHRpbmcgc3RhcnRlZAojIyMgUXVpY2sgU3RhcnQgKEF1dG9tYXRpYyBJbnN0YWxsYXRpb24pCgoqKlRoZSBlYXNpZXN0IHdheSB0byBydW4gTGlicmVDcmF3bCoqIC0ganVzdCBydW4gdGhlIHN0YXJ0dXAgc2NyaXB0IGFuZCBpdCBoYW5kbGVzIGV2ZXJ5dGhpbmc6CgoqKldpbmRvd3M6KioKYGBgYmF0Y2gKc3RhcnQtbGlicmVjcmF3bC5iYXQKYGBgCgoqKkxpbnV4L01hYzoqKgpgYGBiYXNoCmNobW9kICt4IHN0YXJ0LWxpYnJlY3Jhd2wuc2gKLi9zdGFydC1saWJyZWNyYXdsLnNoCmBgYAoKKipXaGF0IGl0IGRvZXMgYXV0b21hdGljYWxseToqKgoxLiBDaGVja3MgZm9yIERvY2tlciAtIGlmIGZvdW5kLCBydW5zIExpYnJlQ3Jhd2wgaW4gYSBjb250YWluZXIgKHJlY29tbWVuZGVkKQoyLiBJZiBubyBEb2NrZXIsIGNoZWNrcyBmb3IgUHl0aG9uIC0gaWYgbm90IGZvdW5kLCBkb3dubG9hZHMgYW5kIGluc3RhbGxzIGl0IChXaW5kb3dzIG9ubHkgKnRlbXBvcmFpcmlseSBkaXNhYmxlZCBzaW5jZSBpdCBjYXVzZXMgc29tZSBiYXQgaXNzdWVzKikKMy4gSW5zdGFsbHMgYWxsIGRlcGVuZGVuY2llcyBhdXRvbWF0aWNhbGx5IChgcGlwIGluc3RhbGwgLXIgcmVxdWlyZW1lbnRzLnR4dGApCjQuIEluc3RhbGxzIFBsYXl3cmlnaHQgYnJvd3NlcnMgZm9yIEphdmFTY3JpcHQgcmVuZGVyaW5nCjUuIFN0YXJ0cyBMaWJyZUNyYXdsIGluIGxvY2FsIG1vZGUgKG5vIGF1dGhlbnRpY2F0aW9uKQo2LiBPcGVucyB5b3VyIGJyb3dzZXIgdG8gYGh0dHA6Ly9sb2NhbGhvc3Q6NTAwMGAKCiMjIyBNYW51YWwgSW5zdGFsbGF0aW9uCgpJZiB5b3UgcHJlZmVyIHRvIGluc3RhbGwgbWFudWFsbHkgb3Igd2FudCBtb3JlIGNvbnRyb2w6CgojIyMjIE9wdGlvbiAxOiBEb2NrZXIgKFJlY29tbWVuZGVkKQoKKipSZXF1aXJlbWVudHM6KioKLSBEb2NrZXIgYW5kIERvY2tlciBDb21wb3NlCgoqKlN0ZXBzOioqCmBgYGJhc2gKIyBDbG9uZSB0aGUgcmVwb3NpdG9yeQpnaXQgY2xvbmUgaHR0cHM6Ly9naXRodWIuY29tL1BoaWFsc0Jhc2VtZW50L0xpYnJlQ3Jhd2wuZ2l0CmNkIExpYnJlQ3Jhd2wKCiMgQ29weSBlbnZpcm9ubWVudCBmaWxlCmNwIC5lbnYuZXhhbXBsZSAuZW52CgojIFN0YXJ0IExpYnJlQ3Jhd2wKZG9ja2VyIGNvbXBvc2UgdXAgLWQKCiMgT3BlbiBicm93c2VyIHRvIGh0dHA6Ly9sb2NhbGhvc3Q6NTAwMApgYGAKQnkgZGVmYXVsdCwgTGlicmVDcmF3bCBydW5zIGluIGxvY2FsIG1vZGUgZm9yIGVhc3kgcGVyc29uYWwgdXNlLiBUaGUgYC5lbnZgIGZpbGUgY29udHJvbHMgdGhpczoKCmBgYGJhc2gKIyAuZW52IGZpbGUKTE9DQUxfTU9ERT10cnVlCkhPU1RfQklORElORz0xMjcuMC4wLjEKUkVHSVNUUkFUSU9OX0RJU0FCTEVEPWZhbHNlCmBgYAoKRm9yIHByb2R1Y3Rpb24gZGVwbG95bWVudCB3aXRoIHVzZXIgYXV0aGVudGljYXRpb24sIGVkaXQgeW91ciBgLmVudmAgZmlsZToKCmBgYGJhc2gKIyAuZW52IGZpbGUKTE9DQUxfTU9ERT1mYWxzZQpIT1NUX0JJTkRJTkc9MC4wLjAuMApSRUdJU1RSQVRJT05fRElTQUJMRUQ9ZmFsc2UKIyBHZW5lcmF0ZSB3aXRoOiBweXRob24gLWMgImltcG9ydCBzZWNyZXRzOyBwcmludChzZWNyZXRzLnRva2VuX2hleCgzMikpIgpTRUNSRVRfS0VZPXJlcGxhY2Utd2l0aC1hLWxvbmctcmFuZG9tLXN0cmluZwpgYGAKCgojIyMjIE9wdGlvbiAyOiBQeXRob24KCi0gUHl0aG9uIDMuOCBvciBsYXRlcgotIE1vZGVybiB3ZWIgYnJvd3NlciAoQ2hyb21lLCBGaXJlZm94LCBTYWZhcmksIEVkZ2UpCgojIyMgSW5zdGFsbGF0aW9uCgoxLiBDbG9uZSBvciBkb3dubG9hZCB0aGlzIHJlcG9zaXRvcnkKCjIuIEluc3RhbGwgZGVwZW5kZW5jaWVzOgpgYGBiYXNoCnBpcCBpbnN0YWxsIC1yIHJlcXVpcmVtZW50cy50eHQKYGBgCgozLiBGb3IgSmF2YVNjcmlwdCByZW5kZXJpbmcgc3VwcG9ydCAob3B0aW9uYWwpOgpgYGBiYXNoCnBsYXl3cmlnaHQgaW5zdGFsbCBjaHJvbWl1bQpgYGAKCjQuIFJ1biB0aGUgYXBwbGljYXRpb246CmBgYGJhc2gKIyBTdGFuZGFyZCBtb2RlICh3aXRoIGF1dGhlbnRpY2F0aW9uIGFuZCB0aWVyIHN5c3RlbSkKcHl0aG9uIG1haW4ucHkKCiMgTG9jYWwgbW9kZSAoYWxsIHVzZXJzIGdldCBhZG1pbiB0aWVyLCBubyByYXRlIGxpbWl0cykKcHl0aG9uIG1haW4ucHkgLS1sb2NhbAojIG9yCnB5dGhvbiBtYWluLnB5IC1sCmBgYAoKNS4gT3BlbiB5b3VyIGJyb3dzZXIgYW5kIG5hdmlnYXRlIHRvOgogICAtIExvY2FsOiBgaHR0cDovL2xvY2FsaG9zdDo1MDAwYAogICAtIE5ldHdvcms6IGBodHRwOi8vPHlvdXItaXA+OjUwMDBgCgoKIyMgTGlicmVDcmF3bCBQbHVnaW5zCgpEcm9wIHlvdXIgY3VzdG9tIHBsdWdpbiBmaWxlcyBpbiBgL3dlYi9zdGF0aWMvcGx1Z2lucy9gISBFYWNoIGAuanNgIGZpbGUgd2lsbCBhdXRvbWF0aWNhbGx5IGNyZWF0ZSBhIG5ldyB0YWIgaW4gTGlicmVDcmF3bC4KCiMjIyDwn5SMIFF1aWNrIFN0YXJ0CgoxLiBDcmVhdGUgYSBuZXcgYC5qc2AgZmlsZSBpbiB0aGlzIGZvbGRlciAoZS5nLiwgYG15LXBsdWdpbi5qc2ApCjIuIFJlZ2lzdGVyIHlvdXIgcGx1Z2luIHVzaW5nIHRoZSBMaWJyZUNyYXdsIFBsdWdpbiBBUEkKMy4gUmVmcmVzaCB0aGUgYXBwIC0geW91ciBuZXcgdGFiIGFwcGVhcnMgYXV0b21hdGljYWxseSEKCiMjIyDwn5OdIEV4YW1wbGUgUGx1Z2luIFN0cnVjdHVyZQoKYGBgamF2YXNjcmlwdApMaWJyZUNyYXdsUGx1Z2luLnJlZ2lzdGVyKHsKICAvLyBSZXF1aXJlZDogVW5pcXVlIElEICh1c2VkIGZvciB0YWIgaWRlbnRpZmljYXRpb24pCiAgaWQ6ICdteS1wbHVnaW4nLAoKICAvLyBSZXF1aXJlZDogRGlzcGxheSBuYW1lCiAgbmFtZTogJ015IFBsdWdpbicsCgogIC8vIFJlcXVpcmVkOiBUYWIgY29uZmlndXJhdGlvbgogIHRhYjogewogICAgbGFiZWw6ICdNeSBUYWInLAogICAgaWNvbjogJ/CflKUnLCAvLyBPcHRpb25hbCBlbW9qaQogIH0sCgogIC8vIENhbGxlZCB3aGVuIHlvdXIgdGFiIGlzIGFjdGl2YXRlZAogIG9uVGFiQWN0aXZhdGUoY29udGFpbmVyLCBkYXRhKSB7CiAgICAvLyBkYXRhIGNvbnRhaW5zOiB7IHVybHMsIGxpbmtzLCBpc3N1ZXMsIHN0YXRzIH0KICAgIGNvbnRhaW5lci5pbm5lckhUTUwgPSBgCiAgICAgIDxkaXYgY2xhc3M9InBsdWdpbi1jb250ZW50IiBzdHlsZT0icGFkZGluZzogMjBweDsgb3ZlcmZsb3cteTogYXV0bzsgbWF4LWhlaWdodDogY2FsYygxMDB2aCAtIDI4MHB4KTsiPgogICAgICAgIDxoMj5NeSBDdXN0b20gQW5hbHlzaXM8L2gyPgogICAgICAgIDxwPkZvdW5kICR7ZGF0YS51cmxzLmxlbmd0aH0gVVJMcyE8L3A+CiAgICAgIDwvZGl2PgogICAgYDsKICB9LAoKICAvLyBPcHRpb25hbDogQ2FsbGVkIGR1cmluZyBsaXZlIGNyYXdscyB3aGVuIGRhdGEgdXBkYXRlcwogIG9uRGF0YVVwZGF0ZShkYXRhKSB7CiAgICBpZiAodGhpcy5pc0FjdGl2ZSkgewogICAgICAvLyBVcGRhdGUgeW91ciBVSQogICAgfQogIH0KfSk7CmBgYAoKIyMjIPCfjq8gQXZhaWxhYmxlIERhdGEKCllvdXIgcGx1Z2luIHJlY2VpdmVzIHRoZSBzYW1lIGRhdGEgYXMgYnVpbHQtaW4gdGFiczoKCi0gKipgdXJsc2AqKiAtIEFycmF5IG9mIGFsbCBjcmF3bGVkIFVSTHMgd2l0aCBmdWxsIG1ldGFkYXRhCi0gKipgbGlua3NgKiogLSBBbGwgZGlzY292ZXJlZCBsaW5rcyAoaW50ZXJuYWwvZXh0ZXJuYWwpCi0gKipgaXNzdWVzYCoqIC0gRGV0ZWN0ZWQgU0VPIGlzc3VlcwotICoqYHN0YXRzYCoqIC0gQ3Jhd2wgc3RhdGlzdGljcyAoZGlzY292ZXJlZCwgY3Jhd2xlZCwgZGVwdGgsIHNwZWVkKQoKIyMjIPCfk5ogRnVsbCBBUEkgUmVmZXJlbmNlCgojIyMjIFBsdWdpbiBDb25maWd1cmF0aW9uCgpgYGBqYXZhc2NyaXB0CnsKICBpZDogc3RyaW5nLCAgICAgICAgICAgICAgLy8gVW5pcXVlIGlkZW50aWZpZXIKICBuYW1lOiBzdHJpbmcsICAgICAgICAgICAgLy8gRGlzcGxheSBuYW1lCiAgdmVyc2lvbjogc3RyaW5nLCAgICAgICAgIC8vIE9wdGlvbmFsIHZlcnNpb24KICBhdXRob3I6IHN0cmluZywgICAgICAgICAgLy8gT3B0aW9uYWwgYXV0aG9yCiAgZGVzY3JpcHRpb246IHN0cmluZywgICAgIC8vIE9wdGlvbmFsIGRlc2NyaXB0aW9uCgogIHRhYjogewogICAgbGFiZWw6IHN0cmluZywgICAgICAgICAvLyBUYWIgYnV0dG9uIHRleHQKICAgIGljb246IHN0cmluZywgICAgICAgICAgLy8gT3B0aW9uYWwgZW1vamkvaWNvbgogICAgcG9zaXRpb246IG51bWJlciAgICAgICAvLyBPcHRpb25hbCBwb3NpdGlvbiAoZGVmYXVsdDogYXBwZW5kIHRvIGVuZCkKICB9Cn0KYGBgCgojIyMjIExpZmVjeWNsZSBIb29rcwoKLSBgb25Mb2FkKClgIC0gQ2FsbGVkIHdoZW4gcGx1Z2luIGxvYWRzCi0gYG9uVGFiQWN0aXZhdGUoY29udGFpbmVyLCBkYXRhKWAgLSBDYWxsZWQgd2hlbiB0YWIgYmVjb21lcyBhY3RpdmUKLSBgb25UYWJEZWFjdGl2YXRlKClgIC0gQ2FsbGVkIHdoZW4gdXNlciBzd2l0Y2hlcyBhd2F5Ci0gYG9uRGF0YVVwZGF0ZShkYXRhKWAgLSBDYWxsZWQgZHVyaW5nIGxpdmUgY3Jhd2xzCi0gYG9uQ3Jhd2xDb21wbGV0ZShkYXRhKWAgLSBDYWxsZWQgd2hlbiBjcmF3bCBmaW5pc2hlcwoKIyMjIyBVdGlsaXRpZXMKCkFjY2VzcyBidWlsdC1pbiB1dGlsaXRpZXMgdmlhIGB0aGlzLnV0aWxzYDoKCmBgYGphdmFzY3JpcHQKdGhpcy51dGlscy5zaG93Tm90aWZpY2F0aW9uKG1lc3NhZ2UsIHR5cGUpIC8vICdzdWNjZXNzJywgJ2Vycm9yJywgJ2luZm8nCnRoaXMudXRpbHMuZm9ybWF0VXJsKHVybCkKdGhpcy51dGlscy5lc2NhcGVIdG1sKHRleHQpCmBgYAoKIyMjIyDwn46oIFN0eWxpbmcKClVzZSB0aGVzZSBDU1MgY2xhc3NlcyB0byBtYXRjaCBMaWJyZUNyYXdsJ3MgZGVzaWduOgoKLSBgLnBsdWdpbi1jb250ZW50YCAtIE1haW4gY29udGFpbmVyCi0gYC5wbHVnaW4taGVhZGVyYCAtIEhlYWRlciBzZWN0aW9uCi0gYC5kYXRhLXRhYmxlYCAtIFRhYmxlcyAoYXV0by1zdHlsZWQpCi0gYC5zdGF0LWNhcmRgIC0gU3RhdGlzdGljIGNhcmRzCi0gYC5zY29yZS1nb29kYCAvIGAuc2NvcmUtbmVlZHMtaW1wcm92ZW1lbnRgIC8gYC5zY29yZS1wb29yYCAtIFNjb3JlIGluZGljYXRvcnMKCioqSW1wb3J0YW50OioqIEFsd2F5cyBhZGQgdGhlc2Ugc3R5bGVzIHRvIHlvdXIgbWFpbiBwbHVnaW4gY29udGFpbmVyIGZvciBwcm9wZXIgc2Nyb2xsaW5nOgoKYGBgamF2YXNjcmlwdApjb250YWluZXIuaW5uZXJIVE1MID0gYAogIDxkaXYgY2xhc3M9InBsdWdpbi1jb250ZW50IiBzdHlsZT0icGFkZGluZzogMjBweDsgb3ZlcmZsb3cteTogYXV0bzsgbWF4LWhlaWdodDogY2FsYygxMDB2aCAtIDI4MHB4KTsiPgogICAgPCEtLSBZb3VyIGNvbnRlbnQgaGVyZSAtLT4KICA8L2Rpdj4KYDsKYGBgCgpUaGUgYG1heC1oZWlnaHQ6IGNhbGMoMTAwdmggLSAyODBweClgIGVuc3VyZXMgeW91ciBjb250ZW50IHNjcm9sbHMgcHJvcGVybHkgd2l0aGluIHRoZSB0YWIgcGFuZS4KCiMjIyMgRXhhbXBsZSBQbHVnaW5zCgpDaGVjayBvdXQgdGhlc2UgZXhhbXBsZSBwbHVnaW5zIHRvIGdldCBzdGFydGVkOgoKLSBgX2V4YW1wbGUtcGx1Z2luLmpzYCAtIEJhc2ljIHRlbXBsYXRlIChpZ25vcmVkIGJ5IGxvYWRlcikKLSBgZS1lLWEtdC5qc2AgLSBFLUUtQS1UIGFuYWx5emVyIGV4YW1wbGUKCgojIyMgUnVubmluZyBNb2RlcwoKKipTdGFuZGFyZCBNb2RlKiogKGRlZmF1bHQpOgotIEZ1bGwgYXV0aGVudGljYXRpb24gc3lzdGVtIHdpdGggbG9naW4vcmVnaXN0ZXIKLSBUaWVyLWJhc2VkIGFjY2VzcyBjb250cm9sIChHdWVzdCwgVXNlciwgRXh0cmEsIEFkbWluKQotIEd1ZXN0IHVzZXJzIGxpbWl0ZWQgdG8gMyBjcmF3bHMgcGVyIDI0IGhvdXJzIChJUC1iYXNlZCkKLSBJZGVhbCBmb3IgcHVibGljLWZhY2luZyBkZW1vcyBvciBzaGFyZWQgaG9zdGluZwoKKipMb2NhbCBNb2RlKiogKGAtLWxvY2FsYCBvciBgLWxgKToKLSBBbGwgdXNlcnMgYXV0b21hdGljYWxseSBnZXQgYWRtaW4gdGllciBhY2Nlc3MKLSBObyByYXRlIGxpbWl0cyBvciB0aWVyIHJlc3RyaWN0aW9ucwotIFBlcmZlY3QgZm9yIHBlcnNvbmFsIHVzZSBvciBzaW5nbGUtdXNlciBzZWxmLWhvc3RpbmcKLSBSZWNvbW1lbmRlZCBmb3IgbG9jYWwgZGV2ZWxvcG1lbnQgYW5kIHRlc3RpbmcKCiMjIENvbmZpZ3VyYXRpb24KCkNsaWNrICJTZXR0aW5ncyIgdG8gY29uZmlndXJlOgoKLSAqKkNyYXdsZXIgc2V0dGluZ3MqKjogZGVwdGggKHVwIHRvIDVNIFVSTHMpLCBkZWxheXMsIGV4dGVybmFsIGxpbmtzCi0gKipSZXF1ZXN0IHNldHRpbmdzKio6IHVzZXIgYWdlbnQsIHRpbWVvdXRzLCBwcm94eSwgcm9ib3RzLnR4dAotICoqSmF2YVNjcmlwdCByZW5kZXJpbmcqKjogYnJvd3NlciBlbmdpbmUsIHdhaXQgdGltZXMsIHZpZXdwb3J0IHNpemUKLSAqKkZpbHRlcnMqKjogZmlsZSB0eXBlcyBhbmQgVVJMIHBhdHRlcm5zIHRvIGluY2x1ZGUvZXhjbHVkZQotICoqRXhwb3J0IG9wdGlvbnMqKjogZm9ybWF0cyBhbmQgZmllbGRzIHRvIGV4cG9ydAotICoqQ3VzdG9tIENTUyoqOiBwZXJzb25hbGl6ZSB0aGUgVUkgYXBwZWFyYW5jZSB3aXRoIGN1c3RvbSBzdHlsZXMKLSAqKklzc3VlIGV4Y2x1c2lvbioqOiBwYXR0ZXJucyB0byBleGNsdWRlIGZyb20gU0VPIGlzc3VlIGRldGVjdGlvbgoKRm9yIFBhZ2VTcGVlZCBhbmFseXNpcywgYWRkIGEgR29vZ2xlIEFQSSBrZXkgaW4gU2V0dGluZ3MgPiBSZXF1ZXN0cyBmb3IgaGlnaGVyIHJhdGUgbGltaXRzICgyNWsvZGF5IHZzIGxpbWl0ZWQpLgoKIyMgRXhwb3J0IGZvcm1hdHMKCi0gKipDU1YqKjogU3ByZWFkc2hlZXQtZnJpZW5kbHkgZm9ybWF0Ci0gKipKU09OKio6IFN0cnVjdHVyZWQgZGF0YSB3aXRoIGFsbCBkZXRhaWxzCi0gKipYTUwqKjogTWFya3VwIGZvcm1hdCBmb3Igb3RoZXIgdG9vbHMKCiMjIE11bHRpLXRlbmFuY3kKCkxpYnJlQ3Jhd2wgc3VwcG9ydHMgbXVsdGlwbGUgY29uY3VycmVudCB1c2VycyB3aXRoIGlzb2xhdGVkIHNlc3Npb25zOgoKLSBFYWNoIGJyb3dzZXIgc2Vzc2lvbiBnZXRzIGl0cyBvd24gY3Jhd2xlciBpbnN0YW5jZSBhbmQgZGF0YQotIFNldHRpbmdzIGFyZSBzdG9yZWQgaW4gYnJvd3NlciBsb2NhbFN0b3JhZ2UgKHBlcnNpc3RlbnQgYWNyb3NzIHJlc3RhcnRzKQotIEN1c3RvbSBDU1MgdGhlbWVzIGFyZSBwZXItYnJvd3NlcgotIFNlc3Npb25zIGV4cGlyZSBhZnRlciAxIGhvdXIgb2YgaW5hY3Rpdml0eQotIENyYXdsIGRhdGEgaXMgaXNvbGF0ZWQgYmV0d2VlbiB1c2VycwoKIyMgS25vd24gbGltaXRhdGlvbnMKCi0gUGFnZVNwZWVkIEFQSSBoYXMgcmF0ZSBsaW1pdHMgKHdvcmtzIGJldHRlciB3aXRoIEFQSSBrZXkpCi0gTGFyZ2Ugc2l0ZXMgbWF5IHRha2UgdGltZSB0byBjcmF3bCBjb21wbGV0ZWx5Ci0gSmF2YVNjcmlwdCByZW5kZXJpbmcgaXMgc2xvd2VyIHRoYW4gSFRUUC1vbmx5IGNyYXdsaW5nCi0gU2V0dGluZ3Mgc3RvcmVkIGluIGxvY2FsU3RvcmFnZSAoY2xlYXJlZCBpZiBicm93c2VyIGRhdGEgaXMgY2xlYXJlZCkKCiMjIEZpbGVzCgotIGBtYWluLnB5YCAtIE1haW4gYXBwbGljYXRpb24gYW5kIEZsYXNrIHNlcnZlcgotIGBzcmMvY3Jhd2xlci5weWAgLSBDb3JlIGNyYXdsaW5nIGVuZ2luZQotIGBzcmMvc2V0dGluZ3NfbWFuYWdlci5weWAgLSBDb25maWd1cmF0aW9uIG1hbmFnZW1lbnQKLSBgd2ViL2AgLSBGcm9udGVuZCBpbnRlcmZhY2UgZmlsZXMKCiMjIExpY2Vuc2UKCk1JVCBMaWNlbnNlIC0gc2VlIExJQ0VOU0UgZmlsZSBmb3IgZGV0YWlscy4K
+# LibreCrawl
+
+A web-based multi-tenant crawler for SEO analysis and website auditing. This fork is kept for [Sitewalk](https://github.com/adityaarsharma/sitewalk), a technical SEO audit tool you can use from ChatGPT ([audit.adityaarsharma.com](https://audit.adityaarsharma.com)); Sitewalk uses LibreCrawl as its crawler engine.
+
+🌐 **Website**: [librecrawl.com](https://librecrawl.com)
+
+> **This is an unofficial fork of LibreCrawl** ([https://github.com/phialsbasement/librecrawl](https://github.com/phialsbasement/librecrawl)). Tips via Ko-fi support my fork, not the upstream project.
+
+[![Leave a tip](https://img.shields.io/badge/Leave%20a%20tip-Ko--fi-FF5E5B?style=flat-square&logo=ko-fi&logoColor=white)](https://ko-fi.com/adityaarsharma)
+
+**Demo no longer available cause people thought it was a prod environ, it isnt, it was a demo to get a taste before installing**
+
+**API Documentation:** [https://librecrawl.com/api/docs/](https://librecrawl.com/api/docs/)
+
+LibreCrawl will ***always*** be free and open source. If it's replacing your $259/year Screaming Frog license, deepcrawl license or sitebulb license, [buy me a coffee](https://www.paypal.com/donate/?business=7H9HFA3385JS8&no_recurring=0&item_name=Continue+the+development+of+LibreCrawl&currency_code=AUD).
+
+## About this fork
+
+- **Unofficial.** Not affiliated with LibreCrawl or its maintainer. The official project and website are [PhialsBasement/LibreCrawl](https://github.com/phialsbasement/librecrawl) and [librecrawl.com](https://librecrawl.com). The MIT licence is kept, and the credit for the crawler is upstream's.
+- **Why it exists.** It is the LibreCrawl base for [Sitewalk](https://github.com/adityaarsharma/sitewalk): the self-hosted Sitewalk server drives LibreCrawl, and the hosted [Sitewalk for ChatGPT](https://chatgpt.com/plugins/plugin_asdk_app_6ac47963cb448191a5b1757e0682bd6a) app runs on it too. If you want to run an audit, start with Sitewalk. If you want the crawler on its own, use upstream.
+- **Where it stands today.** The crawler code here is upstream's as of 1 June 2026, plus this README. Nothing else is changed yet. Sitewalk keeps its own patched copy of the crawler for now, so the changes below are not in this repository yet. Newer upstream features (n-gram analysis, custom extraction, list mode) landed after this fork last synced, so for the newest crawler use upstream.
+- **Who keeps it.** [Aditya Sharma](https://adityaarsharma.com).
+
+### What Sitewalk changes on top of LibreCrawl (in Sitewalk today, not yet in this fork)
+
+- Image and link checks never probe third-party sites, and they obey robots.txt with the same user agent as page fetches. A URL that robots.txt disallows is never requested, so it cannot be reported as a broken image.
+- A report that ranks issues by impact, with a plain fix for each, as PDF and CSV files.
+
+### Planned for this fork (not built yet)
+
+- Bring the Sitewalk crawler changes above in as a clean change, and offer them upstream as a pull request.
+- Sync with upstream so the newer features are included.
+- A README and docs that state what differs from upstream, kept up to date as changes land.
+
+Tips are welcome through the Ko-fi badge above. If LibreCrawl itself saves you money, the upstream project's own donation link further down is the way to support it.
+
+## What it does
+
+LibreCrawl crawls websites and gives you detailed information about pages, links, SEO elements, and performance. It's built as a web application using Python Flask with a modern web interface supporting multiple concurrent users.
+
+## Features
+
+- 🚀 **Multi-tenancy** - Multiple users can crawl simultaneously with isolated sessions
+- 🎨 **Custom CSS styling** - Personalize the UI with your own CSS themes
+- 💾 **Browser localStorage persistence** - Settings saved per browser
+- 🔄 **JavaScript rendering** for dynamic content (React, Vue, Angular, etc.)
+- 📊 **SEO analysis** - Extract titles, meta descriptions, headings, etc.
+- 🔗 **Link analysis** - Track internal and external links with detailed relationship mapping
+- 📈 **PageSpeed Insights integration** - Analyze Core Web Vitals
+- 💾 **Multiple export formats** - CSV, JSON, or XML
+- 🔍 **Issue detection** - Automated SEO issue identification
+- ⚡ **Real-time crawling progress** with live statistics
+
+## Getting started
+### Quick Start (Automatic Installation)
+
+**The easiest way to run LibreCrawl** - just run the startup script and it handles everything:
+
+**Windows:**
+```batch
+start-librecrawl.bat
+```
+
+**Linux/Mac:**
+```bash
+chmod +x start-librecrawl.sh
+./start-librecrawl.sh
+```
+
+**What it does automatically:**
+1. Checks for Docker - if found, runs LibreCrawl in a container (recommended)
+2. If no Docker, checks for Python - if not found, downloads and installs it (Windows only *temporairily disabled since it causes some bat issues*)
+3. Installs all dependencies automatically (`pip install -r requirements.txt`)
+4. Installs Playwright browsers for JavaScript rendering
+5. Starts LibreCrawl in local mode (no authentication)
+6. Opens your browser to `http://localhost:5000`
+
+### Manual Installation
+
+If you prefer to install manually or want more control:
+
+#### Option 1: Docker (Recommended)
+
+**Requirements:**
+- Docker and Docker Compose
+
+**Steps:**
+```bash
+# Clone the repository
+git clone https://github.com/PhialsBasement/LibreCrawl.git
+cd LibreCrawl
+
+# Copy environment file
+cp .env.example .env
+
+# Start LibreCrawl
+docker compose up -d
+
+# Open browser to http://localhost:5000
+```
+By default, LibreCrawl runs in local mode for easy personal use. The `.env` file controls this:
+
+```bash
+# .env file
+LOCAL_MODE=true
+HOST_BINDING=127.0.0.1
+REGISTRATION_DISABLED=false
+```
+
+For production deployment with user authentication, edit your `.env` file:
+
+```bash
+# .env file
+LOCAL_MODE=false
+HOST_BINDING=0.0.0.0
+REGISTRATION_DISABLED=false
+# Generate with: python -c "import secrets; print(secrets.token_hex(32))"
+SECRET_KEY=replace-with-a-long-random-string
+```
+
+
+#### Option 2: Python
+
+- Python 3.8 or later
+- Modern web browser (Chrome, Firefox, Safari, Edge)
+
+### Installation
+
+1. Clone or download this repository
+
+2. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
+
+3. For JavaScript rendering support (optional):
+```bash
+playwright install chromium
+```
+
+4. Run the application:
+```bash
+# Standard mode (with authentication and tier system)
+python main.py
+
+# Local mode (all users get admin tier, no rate limits)
+python main.py --local
+# or
+python main.py -l
+```
+
+5. Open your browser and navigate to:
+   - Local: `http://localhost:5000`
+   - Network: `http://<your-ip>:5000`
+
+
+## LibreCrawl Plugins
+
+Drop your custom plugin files in `/web/static/plugins/`! Each `.js` file will automatically create a new tab in LibreCrawl.
+
+### 🔌 Quick Start
+
+1. Create a new `.js` file in this folder (e.g., `my-plugin.js`)
+2. Register your plugin using the LibreCrawl Plugin API
+3. Refresh the app - your new tab appears automatically!
+
+### 📝 Example Plugin Structure
+
+```javascript
+LibreCrawlPlugin.register({
+  // Required: Unique ID (used for tab identification)
+  id: 'my-plugin',
+
+  // Required: Display name
+  name: 'My Plugin',
+
+  // Required: Tab configuration
+  tab: {
+    label: 'My Tab',
+    icon: '🔥', // Optional emoji
+  },
+
+  // Called when your tab is activated
+  onTabActivate(container, data) {
+    // data contains: { urls, links, issues, stats }
+    container.innerHTML = `
+      <div class="plugin-content" style="padding: 20px; overflow-y: auto; max-height: calc(100vh - 280px);">
+        <h2>My Custom Analysis</h2>
+        <p>Found ${data.urls.length} URLs!</p>
+      </div>
+    `;
+  },
+
+  // Optional: Called during live crawls when data updates
+  onDataUpdate(data) {
+    if (this.isActive) {
+      // Update your UI
+    }
+  }
+});
+```
+
+### 🎯 Available Data
+
+Your plugin receives the same data as built-in tabs:
+
+- **`urls`** - Array of all crawled URLs with full metadata
+- **`links`** - All discovered links (internal/external)
+- **`issues`** - Detected SEO issues
+- **`stats`** - Crawl statistics (discovered, crawled, depth, speed)
+
+### 📚 Full API Reference
+
+#### Plugin Configuration
+
+```javascript
+{
+  id: string,              // Unique identifier
+  name: string,            // Display name
+  version: string,         // Optional version
+  author: string,          // Optional author
+  description: string,     // Optional description
+
+  tab: {
+    label: string,         // Tab button text
+    icon: string,          // Optional emoji/icon
+    position: number       // Optional position (default: append to end)
+  }
+}
+```
+
+#### Lifecycle Hooks
+
+- `onLoad()` - Called when plugin loads
+- `onTabActivate(container, data)` - Called when tab becomes active
+- `onTabDeactivate()` - Called when user switches away
+- `onDataUpdate(data)` - Called during live crawls
+- `onCrawlComplete(data)` - Called when crawl finishes
+
+#### Utilities
+
+Access built-in utilities via `this.utils`:
+
+```javascript
+this.utils.showNotification(message, type) // 'success', 'error', 'info'
+this.utils.formatUrl(url)
+this.utils.escapeHtml(text)
+```
+
+#### 🎨 Styling
+
+Use these CSS classes to match LibreCrawl's design:
+
+- `.plugin-content` - Main container
+- `.plugin-header` - Header section
+- `.data-table` - Tables (auto-styled)
+- `.stat-card` - Statistic cards
+- `.score-good` / `.score-needs-improvement` / `.score-poor` - Score indicators
+
+**Important:** Always add these styles to your main plugin container for proper scrolling:
+
+```javascript
+container.innerHTML = `
+  <div class="plugin-content" style="padding: 20px; overflow-y: auto; max-height: calc(100vh - 280px);">
+    <!-- Your content here -->
+  </div>
+`;
+```
+
+The `max-height: calc(100vh - 280px)` ensures your content scrolls properly within the tab pane.
+
+#### Example Plugins
+
+Check out these example plugins to get started:
+
+- `_example-plugin.js` - Basic template (ignored by loader)
+- `e-e-a-t.js` - E-E-A-T analyzer example
+
+
+### Running Modes
+
+**Standard Mode** (default):
+- Full authentication system with login/register
+- Tier-based access control (Guest, User, Extra, Admin)
+- Guest users limited to 3 crawls per 24 hours (IP-based)
+- Ideal for public-facing demos or shared hosting
+
+**Local Mode** (`--local` or `-l`):
+- All users automatically get admin tier access
+- No rate limits or tier restrictions
+- Perfect for personal use or single-user self-hosting
+- Recommended for local development and testing
+
+## Configuration
+
+Click "Settings" to configure:
+
+- **Crawler settings**: depth (up to 5M URLs), delays, external links
+- **Request settings**: user agent, timeouts, proxy, robots.txt
+- **JavaScript rendering**: browser engine, wait times, viewport size
+- **Filters**: file types and URL patterns to include/exclude
+- **Export options**: formats and fields to export
+- **Custom CSS**: personalize the UI appearance with custom styles
+- **Issue exclusion**: patterns to exclude from SEO issue detection
+
+For PageSpeed analysis, add a Google API key in Settings > Requests for higher rate limits (25k/day vs limited).
+
+## Export formats
+
+- **CSV**: Spreadsheet-friendly format
+- **JSON**: Structured data with all details
+- **XML**: Markup format for other tools
+
+## Multi-tenancy
+
+LibreCrawl supports multiple concurrent users with isolated sessions:
+
+- Each browser session gets its own crawler instance and data
+- Settings are stored in browser localStorage (persistent across restarts)
+- Custom CSS themes are per-browser
+- Sessions expire after 1 hour of inactivity
+- Crawl data is isolated between users
+
+## Known limitations
+
+- PageSpeed API has rate limits (works better with API key)
+- Large sites may take time to crawl completely
+- JavaScript rendering is slower than HTTP-only crawling
+- Settings stored in localStorage (cleared if browser data is cleared)
+
+## Files
+
+- `main.py` - Main application and Flask server
+- `src/crawler.py` - Core crawling engine
+- `src/settings_manager.py` - Configuration management
+- `web/` - Frontend interface files
+
+## License
+
+MIT License - see LICENSE file for details.
